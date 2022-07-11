@@ -13,7 +13,7 @@ ul {
  li {
     display: inline-block;
     width: 30%;
-    position:relative; margin-top: 30px; margin-left: 40px; margin-bottom: 40px;
+    position:relative; margin-top: 45px; margin-left: 40px; margin-bottom: 40px;
     font-size: 20px;
     
  }
@@ -129,15 +129,15 @@ footer span {
 }
  
 
-#sectionPrincipal {
+.sectionPrincipal {
    display: grid;
    grid-template-columns: 1fr;
    grid-template-rows: 0.5fr 3fr 0.5fr;
 
    grid-template-areas: 
    "header"
-   "main "
-   "div " ;
+   "main"
+   "footer" ;
    justify-items: center;
    align-items: center;
 }
@@ -152,8 +152,8 @@ main {
    
 }
 
-div {
-   grid-area: div;
+footer {
+   grid-area: footer;
    
 }
 
@@ -178,18 +178,38 @@ div {
    background-color: black;
 }
 
-@media screen and (max-width: 480px) 
-{
-   section { 
-      display: none;
-   }
-   body {
-      background-color: black;
-   }
-             
-}
+
 
 button {
    color: white;
    background-color: black;
+   border: none;
+}
+@media screen and (max-width: 450px) 
+{
+   .sectionPrincipal
+   {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 3fr 0.5fr;
+      grid-template-columns: repeat 100%;
+      width: 100%;
+      
+   }
+
+   .responsive 
+   {
+      width: 70%;
+   }
+    
+
+
+
+}   
+             
+
+.contenedor {
+   width: 95%;
+   margin: 0 auto;
+
 }
